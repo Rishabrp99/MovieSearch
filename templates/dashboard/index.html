@@ -1,0 +1,25 @@
+{% extends 'partials/base.html' %}
+{% block content %}
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">movie</th>
+        <th scope="col">actor</th>
+        <th scope="col">actress</th>
+        <th scope="col">director</th>
+        <th scope="col">year</th>
+      </tr>
+    </thead>
+    <tbody>
+        {%for data in data %}
+      <tr>
+        <td>{{data.movie_name}}</td>
+        <td>{{data.actor_name}}</td>
+        <td>{{data.actress_name}}</td>
+        <td>{{data.director_name}}</td>
+        <td>{{data.year}}</td>
+      </tr>
+      {%endfor%}
+    </tbody>
+  </table>
+{% endblock %}
